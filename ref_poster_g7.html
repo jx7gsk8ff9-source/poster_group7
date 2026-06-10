@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>参考文献：微塑料与塑料降解研究</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            line-height: 1.55;
+            color: #1e2a3e;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            padding: 2rem 2rem 3rem;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 1.5rem 1.2rem;
+            }
+        }
+
+        h1 {
+            font-size: 1.9rem;
+            font-weight: 600;
+            border-left: 5px solid #2c7da0;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            color: #0b3b4f;
+        }
+
+        .sub {
+            color: #4a627a;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 0.75rem;
+        }
+
+        .ref-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .ref-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.6rem;
+            padding-bottom: 1.2rem;
+            border-bottom: 1px solid #edf2f7;
+            transition: background 0.2s ease;
+        }
+
+        .ref-item:hover {
+            background-color: #fafcff;
+        }
+
+        .ref-num {
+            flex-shrink: 0;
+            font-weight: 700;
+            background-color: #eef2fa;
+            width: 2.2rem;
+            height: 2.2rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 40px;
+            color: #1f6392;
+            font-size: 1rem;
+            margin-top: 0.2rem;
+        }
+
+        .ref-content {
+            flex: 1;
+            word-break: break-word;
+        }
+
+        .ref-authors {
+            font-weight: 600;
+            color: #1e4663;
+            display: inline;
+        }
+
+        .ref-title {
+            font-style: normal;
+            font-weight: 500;
+            color: #0f2b3b;
+        }
+
+        .ref-journal {
+            font-style: italic;
+            color: #2c5a6e;
+        }
+
+        .ref-details {
+            margin-top: 0.35rem;
+            font-size: 0.9rem;
+            color: #2d4a6e;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            align-items: baseline;
+        }
+
+        .ref-links {
+            margin-top: 0.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            font-size: 0.85rem;
+        }
+
+        .btn-link {
+            background: #eef2ff;
+            padding: 0.2rem 0.7rem;
+            border-radius: 24px;
+            text-decoration: none;
+            color: #1f6392;
+            font-weight: 500;
+            transition: 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            border: 1px solid #dce5f2;
+        }
+
+        .btn-link:hover {
+            background: #e0e9ff;
+            border-color: #9bb7d4;
+            text-decoration: none;
+            color: #0b4b6e;
+        }
+
+        a {
+            text-decoration: none;
+            color: #2c7da0;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #1a5d7a;
+        }
+
+        .doi-badge, .pmid-badge, .pmc-badge {
+            font-family: monospace;
+            font-size: 0.8rem;
+            background: #f1f5f9;
+            padding: 0.2rem 0.5rem;
+            border-radius: 18px;
+            color: #2c3e50;
+        }
+
+        .footnote {
+            margin-top: 2.5rem;
+            font-size: 0.8rem;
+            text-align: center;
+            color: #6c86a3;
+            border-top: 1px solid #e2edf7;
+            padding-top: 1.5rem;
+        }
+
+        .back2top {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            background: #ffffffdd;
+            backdrop-filter: blur(5px);
+            border-radius: 40px;
+            padding: 0.4rem 0.9rem;
+            font-size: 0.8rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border: 1px solid #cbdde9;
+        }
+
+        .back2top a {
+            color: #1f6392;
+            font-weight: 500;
+        }
+
+        @media (max-width: 640px) {
+            .ref-details {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+            .ref-links {
+                margin-top: 0.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>📚 参考文献</h1>
+    <div class="sub">微塑料生物累积 · PET塑料生物降解 · 合成生物学与益生菌研究</div>
+
+    <ol class="ref-list" style="list-style: none; padding-left: 0;">
+        <!-- 文献条目均按照用户原始顺序，并强化DOI/PMID链接，缺失DOI的条目使用原始URL -->
+        
+        <!-- [1] Nihart et al. Nat Med 2025 -->
+        <li class="ref-item">
+            <span class="ref-num">1</span>
+            <div class="ref-content">
+                <span class="ref-authors">Nihart AJ, Garcia MA, El Hayek E, Liu R, Olewine M, Kingston JD, Castillo EF, Gullapalli RR, Howard T, Bleske B, Scott J, Gonzalez-Estrella J, Gross JM, Spilde M, Adolphi NL, Gallego DF, Jarrell HS, Dvorscak G, Zuluaga-Ruiz ME, West AB, Campen MJ.</span>
+                <span class="ref-title"> Bioaccumulation of microplastics in decedent human brains.</span>
+                <span class="ref-journal"> Nat Med.</span> 2025 Apr;31(4):1114-1119.<br>
+                <div class="ref-details">
+                    <span>doi: <a href="https://doi.org/10.1038/s41591-024-03453-1" target="_blank" rel="noopener noreferrer">10.1038/s41591-024-03453-1</a></span>
+                    <span>PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/39901044/" target="_blank">39901044</a></span>
+                    <span>PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12003191/" target="_blank">PMC12003191</a></span>
+                </div>
+                <div class="ref-links">
+                    <a href="https://doi.org/10.1038/s41591-024-03453-1" class="btn-link" target="_blank">🔗 查看原文 (DOI)</a>
+                    <span class="doi-badge">Epub 2025 Feb 3 | Erratum: Nat Med 2025;31(4):1367</span>
+                </div>
+            </div>
+        </li>
+
+        <!-- [2] Zhu L et al. Environ Sci Technol 2024 -->
+        <li class="ref-item">
+            <span class="ref-num">2</span>
+            <div class="ref-content">
+                <span class="ref-authors">Zhu L, Wu Z, Dong J, Zhao S, Zhu J, Wang W, Ma F, An L.</span>
+                <span class="ref-title"> Unveiling Small-Sized Plastic Particles Hidden behind Large-Sized Ones in Human Excretion and Their Potential Sources.</span>
+                <span class="ref-journal"> Environ Sci Technol.</span> 2024 Jul 9;58(27):11901-11911.<br>
+                <div class="ref-details">
+                    <span>doi: <a href="https://doi.org/10.1021/acs.est.3c11054" target="_blank">10.1021/acs.est.3c11054</a></span>
+                    <span>PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/38920334/" target="_blank">38920334</a></span>
+                </div>
+                <div class="ref-links">
+                    <a href="https://doi.org/10.1021/acs.est.3c11054" class="btn-link" target="_blank">🔗 ACS全文</a>
+                </div>
+            </div>
+        </li>
+
+        <!-- [3] Song Y et al. Environ Pollut 2025 -->
+        <li class="ref-item">
+            <span class="ref-num">3</span>
+            <div class="ref-content">
+                <span class="ref-authors">Song Y, Zhang J, Shen X, Yang L, Jia Y, Song F, Huang Y, Han B, Zhou S, Zhang N, Ma G.</span>
+                <span class="ref-title"> Microplastics in stools and their influencing factors among young adults from three cities in China: A multicenter cross-sectional study.</span>
+                <span class="ref-journal"> Environ Pollut.</span> 2025 Jan 1;364(Pt 2):125168.<br>
+                <div class="ref-details">
+                    <span>doi: <a href="https://doi.org/10.1016/j.envpol.2024.125168" target="_blank">10.1016/j.envpol.2024.125168</a></span>
+                    <span>PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/39579919/" target="_blank">39579919</a></span>
+                </div>
+                <div class="ref-links">
+                    <a href="https://doi.org/10.1016/j.envpol.2024.125168" class="btn-link" target="_blank">🔗 ScienceDirect</a>
+                </div>
+            </div>
+        </li>
+
+        <!-- [4] Lu H et al. Nature 2022 (PET降解酶 ML) -->
+        <li class="ref-item">
+            <span class="ref-num">4</span>
+            <div class="ref-content">
+                <span class="ref-authors">Lu H, Diaz DJ, Czarnecki NJ, Zhu C, Kim W, Shroff R, Acosta DJ, Alexander BR, Cole HO, Zhang Y, Lynd NA, Ellington AD, Alper HS.</span>
+                <span class="ref-title"> Machine learning-aided engineering of hydrolases for PET depolymerization.</span>
+                <span class="ref-journal"> Nature.</span> 2022 Apr;604(7907):662-667.<br>
+                <div class="ref-details">
+                    <span>doi: <a href="https://doi.org/10.1038/s41586-022-04599-z" target="_blank">10.1038/s41586-022-04599-z</a></span>
+                    <span>PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/35478237/" target="_blank">35478237</a></span>
+                </div>
+                <div class="ref-links">
+                    <a href="https://doi.org/10.1038/s41586-022-04599-z" class="btn-link" target="_blank">🔗 Nature原文</a>
+                </div>
+            </div>
+        </li>
+
+        <!-- [5] Knott BC et al. PNAS 2020 双酶系统 -->
+        <li class="ref-item">
+            <span class="ref-num">5</span>
+            <div class="ref-content">
+                <span class="ref-authors">Knott BC, Erickson E, Allen MD, Gado JE, Graham R, Kearns FL, Pardo I, Topuzlu E, Anderson JJ, Austin HP, Dominick G, Johnson CW, Rorrer NA, Szostkiewicz CJ, Copié V, Payne CM, Woodcock HL, Donohoe BS, Beckham GT, McGeehan JE.</span>
+                <span class="ref-title"> Characterization and engineering of a two-enzyme system for plastics depolymerization.</span>
+                <span class="ref-journal"> Proc Natl Acad Sci U S A.</span> 2020 Oct 13;117(41):25476-25485.<br>
+                <div class="ref-details">
+                    <span>doi: <a href="https://doi.org/10.1073/pnas.2006753117" target="_blank">10.1073/pnas.2006753117</a></span>
+                    <span>PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/32989159/" target="_blank">32989159</a></span>
+                    <span>PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7568301/" target="_blank">PMC7568301</a></span>
+                </div>
+                <div class="ref-links">
+                    <a href="https://doi.org/10.1073/pnas.2006753117" class="btn-link" target="_blank">🔗 PNAS</a>
+                </div>
+            </div>
+        </li>
+
+        <!-- [6] Wang C et al. J Hazard Mater 2024 细菌级联反应 -->
+        <li class="ref-item">
+            <span class="ref-num">6</span>
+            <div class="ref-content">
+                <span class="ref-authors">Wang C, Long R, Lin X, Liu W, Zhu L, Jiang L.</span>
+                <span class="ref-title"> Development and characterization of a bacterial enzyme cascade reaction system for efficient and stable PET degradation.</span>
+                <span class="ref-journal"> J Hazard Mater.</span> 2024 Jul 5;472:134480.<br>
+                <div class="ref-details">
+                    <span>doi: <a href="https://doi.org/10.1016/j.jhazmat.2024.134480" target="_blank">10.1016/j.jhazmat.2024.134480</a></span>
+                    <span>PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/38703683/" target="_blank">38703683</a></span>
+                </div>
+                <div class="ref-links">
+                    <a href="https://doi.org/10.1016/j.jhazmat.2024.134480" class="btn-link" target="_blank">🔗  hazardous materials</a>
+                </div>
+            </div>
+        </li>
+
+        <!-- [7] Carter LM et al. Microb Cell Fact 2024 E.coli表达PETase -->
+        <li class="ref-item">
+            <span class="ref-num">7</span>
+            <div class="ref-content">
+                <span class="ref-authors">Carter LM, MacFarlane CE, Karlock SP, Sen T, Kaar JL, Berberich JA, Boock JT.</span>
+                <span class="ref-title"> Increased cytoplasmic expression of PETase enzymes in E. coli.</span>
+                <span class="ref-journal"> Microb Cell Fact.</span> 2024 Nov 25;23(1):319.<br>
+                <div class="ref-details">
+                    <span>doi: <a href="https://doi.org/10.1186/s12934-024-02585-w" target="_blank">10.1186/s12934-024-02585-w</a></span>
+                    <span>PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/39582006/" target="_blank">39582006</a></span>
+                    <span>PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11587651/" target="_blank">PMC11587651</a></span>
+                </div>
+                <div class="ref-links">
+                    <a href="https://doi.org/10.1186/s12934-024-02585-w" class="btn-link" target="_blank">🔗 BioMed Central</a>
+                </div>
+            </div>
+        </li>
+
+        <!-- [8] Özsoy S et al. Forensic Sci Int 2024 人体胃部微塑料 -->
+        <li class="ref-item">
+            <span class="ref-num">8</span>
+            <div class="ref-content">
+                <span class="ref-authors">Özsoy S, Gündogdu S, Sezigen S, Tasalp E, Ikiz DA, Kideys AE.</span>
+                <span class="ref-title"> Presence of microplastics in human stomachs.</span>
+                <span class="ref-journal"> Forensic Sci Int.</span> 2024 Nov;364:112246.<br>
+                <div class="ref-details">
+                    <span>doi: <a href="https://doi.org/10.1016/j.forsciint.2024.112246" target="_blank">10.1016/j.forsciint.2024.112246</a></span>
+                    <span>PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/39413612/" target="_blank">39413612</a></span>
+                </div>
+                <div class="ref-links">
+                    <a href="https://doi.org/10.1016/j.forsciint.2024.112246" class="btn-link" target="_blank">🔗 Forensic Science International</a>
+                </div>
+            </div>
+        </li>
+
+        <!-- [9] Liu Y et al. ACS Synth Biol 2024 体外杂合生物催化 -->
+        <li class="ref-item">
+            <span class="ref-num">9</span>
+            <div class="ref-content">
+                <span class="ref-authors">Liu Y, Huang S, Liu WQ, Ba F, Liu Y, Ling S, Li J.</span>
+                <span class="ref-title"> An In Vitro Hybrid Biocatalytic System Enabled by a Combination of Surface-Displayed, Purified, and Cell-Free Expressed Enzymes.</span>
+                <span class="ref-journal"> ACS Synth Biol.</span> 2024 May 17;13(5):1434-1441.<br>
+                <div class="ref-details">
+                    <span>doi: <a href="https://doi.org/10.1021/acssynbio.4c00201" target="_blank">10.1021/acssynbio.4c00201</a></span>
+                    <span>PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/38695987/" target="_blank">38695987</a></span>
+                </div>
+                <div class="ref-links">
+                    <a href="https://doi.org/10.1021/acssynbio.4c00201" class="btn-link" target="_blank">🔗 ACS Synthetic Biology</a>
+                </div>
+            </div>
+        </li>
+
+        <!-- [10] Nguyen N et al. iScience 2025 益生菌遗传 safeguard -->
+        <li class="ref-item">
+            <span class="ref-num">10</span>
+            <div class="ref-content">
+                <span class="ref-authors">Nguyen N, Wang M, Li L, Chan CTY.</span>
+                <span class="ref-title"> A genetic safeguard for eliminating target genes in synthetic probiotics in a gut environment.</span>
+                <span class="ref-journal"> iScience.</span> 2025 Jun 27;28(8):113027.<br>
+                <div class="ref-details">
+                    <span>doi: <a href="https://doi.org/10.1016/j.isci.2025.113027" target="_blank">10.1016/j.isci.2025.113027</a></span>
+                    <span>PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/40686611/" target="_blank">40686611</a></span>
+                    <span>PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12274907/" target="_blank">PMC12274907</a></span>
+                </div>
+                <div class="ref-links">
+                    <a href="https://doi.org/10.1016/j.isci.2025.113027" class="btn-link" target="_blank">🔗 Cell Press iScience</a>
+                </div>
+            </div>
+        </li>
+
+        <!-- [11] Sonnenborn U. FEMS Microbiol Lett 2016 E.coli Nissle 1917 -->
+        <li class="ref-item">
+            <span class="ref-num">11</span>
+            <div class="ref-content">
+                <span class="ref-authors">Sonnenborn U.</span>
+                <span class="ref-title"> Escherichia coli strain Nissle 1917-from bench to bedside and back: history of a special Escherichia coli strain with probiotic properties.</span>
+                <span class="ref-journal"> FEMS Microbiol Lett.</span> 2016 Oct;363(19):fnw212.<br>
+                <div class="ref-details">
+                    <span>doi: <a href="https://doi.org/10.1093/femsle/fnw212" target="_blank">10.1093/femsle/fnw212</a></span>
+                    <span>PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/27619890/" target="_blank">27619890</a></span>
+                </div>
+                <div class="ref-links">
+                    <a href="https://doi.org/10.1093/femsle/fnw212" class="btn-link" target="_blank">🔗 Oxford Academic</a>
+                </div>
+            </div>
+        </li>
+
+        <!-- [12] OECD SIDS 对苯二甲酸 -->
+        <li class="ref-item">
+            <span class="ref-num">12</span>
+            <div class="ref-content">
+                <span class="ref-authors">OECD SIDS Initial Assessment Report for Terephthalic Acid (CAS 100-21-0).</span>
+                <div class="ref-details">
+                    <span>报告链接: <a href="https://hpvchemicals.oecd.org/" target="_blank" rel="noopener noreferrer">https://hpvchemicals.oecd.org/</a></span>
+                </div>
+                <div class="ref-links">
+                    <a href="https://hpvchemicals.oecd.org/" class="btn-link" target="_blank">📄 访问OECD HPV化学品数据库</a>
+                </div>
+            </div>
+        </li>
+
+        <!-- [13] ATSDR 乙二醇毒理学档案 -->
+        <li class="ref-item">
+            <span class="ref-num">13</span>
+            <div class="ref-content">
+                <span class="ref-authors">ATSDR (Agency for Toxic Substances and Disease Registry).</span>
+                <span class="ref-title"> Toxicological Profile for Ethylene Glycol.</span>
+                <div class="ref-details">
+                    <span>PDF链接: <a href="https://www.atsdr.cdc.gov/toxprofiles/tp96.pdf" target="_blank" rel="noopener noreferrer">https://www.atsdr.cdc.gov/toxprofiles/tp96.pdf</a></span>
+                </div>
+                <div class="ref-links">
+                    <a href="https://www.atsdr.cdc.gov/toxprofiles/tp96.pdf" class="btn-link" target="_blank">📑 下载毒理学报告 (PDF)</a>
+                </div>
+            </div>
+        </li>
+    </ol>
+    
+    <div class="footnote">
+        ⚡ 所有DOI、PMID链接均可直接访问原文（部分可能需要机构订阅）。<br>
+        扫码即览 | 参考文献共计13篇，涵盖微塑料人体负荷、PET酶工程改造及合成生物学安全策略。
+    </div>
+</div>
+
+<div class="back2top">
+    <a href="#">↑ 返回顶部</a>
+</div>
+
+</body>
+</html>
